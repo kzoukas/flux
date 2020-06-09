@@ -1,5 +1,5 @@
 git:
-  url: git@github.com:rchrd/flux
+  url: git@github.com:IbraheemAlSaady/flux
   branch: master
   path: "helm-charts"
   pollInterval: 1m
