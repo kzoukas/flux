@@ -1,7 +1,0 @@
-azure:
-  resourceGroup: nothing
-  tenantId: 97349232-d59a-4131-b3d0-2c2b0e64fff1
-  subscriptionId: 97349232-d59a-4131-b3d0-2c2b0e64fff1
-  aadClientId: 97349232-d59a-4131-b3d0-2c2b0e64fff1
-  aadClientSecret: 97349232-d59a-4131-b3d0-2c2b0e64fff1
-
