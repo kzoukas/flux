@@ -1,7 +1,7 @@
 git:
   url: git@github.com:rchrd/flux
   branch: master
-  path: "clusters/lab,teams/lab"
+  path: "helm-charts"
   pollInterval: 1m
 
 sync:

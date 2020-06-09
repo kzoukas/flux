@@ -1,0 +1,5 @@
+---
+resources:
+  - sealed-secrets.yaml
+  # - external-dns.yaml
+  
