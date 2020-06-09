@@ -1,4 +1,6 @@
 ---
+  ## docs: using values from secrets: https://docs.fluxcd.io/projects/helm-operator/en/stable/helmrelease-guide/values/
+  ## docs: generate the sealedSecret value: https://github.com/fluxcd/helm-operator-get-started#managing-kubernetes-secrets
   apiVersion: helm.fluxcd.io/v1
   kind: HelmRelease
   metadata:
