@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+  labels:
+    name: dev
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: ext-dns-creds
+  namespace: dev
+spec:
+  encryptedData:
+    ext-dns-creds.yaml: AgCb4GjCPBLexr1pqWi8HnZ2HyAV7QVBj8cnG9j3KKsPYTbsOjmgQPRWOVqyfKNrV6Tfc6dDgo9UibiOSe3OzbuULD2P35ZQxRBJwUUHi5TT6QDxthtf5LFLqL8lPumKBSsZgC5yhlcDhNc5muyC3JladjaA0TNU3BsTJXS8UZsNniXMPqPOOg1eA4oOoi1pd74Nc9YScSvAcUcTpNlflzGwKW/I5Cu+2Cn7qaa1QtfVW6gTdlllgWmP+yAprkVwDF4XLmpwU250ILVefqtY+cz/t9XysQs9YuQ6205NBNl9xAphA7pETC6EckJnsSNQgRvEFsa2OmWPFoasz99I0LvmE1BdQBXxs6tSzNmInkmwN8E2yDk8KLVvz9XFr6qLy1ncv6J/wpAAFFC1Yq3eT8qD/Ss3ueLWHIhVIU9wrMNRIcBe3m5E2t/5p65lWmMlmCY7URZJ8eRoK+4VhEGhDGj/lHJDB8kgu9e9B2YNdN4AusXSgk/rm+bt4w82hUJFuTTYkZCjPAJT2kh2pzpJYOVrjNsNvm4vyrX66eR+fqnt1pkPKCZ41nqygXl/4QiwfLJEOChUO4DsJa8HY6cwsiY3yuOBYwjmR9TE+UfvhnyJkTUXfaRbnnPoEIbFiHG6SGFJakJ9Lj8zHEk8xBq8cG2urb3+ZMeEgll3paq/0KcZP2NShmoDkNIiM82tt1ji35oOo2oueJk22aQC7NFy61E2ToLOiisdLbOrL8IladjDstL++Eiz5yATS07GyjnvyNjngB9u+Fk2MU+5TpD1wtdp/zzFpV+bQfEkazrvPpGytfFimz75TqowEisQhdDpSOElyktYQXrXBfvjbvCI3QAgQgvuugSIUTccYPhcCJkvuuJ3KwZnNeZOnS6dNh6yopBzhAqekbFgXCSS1Y+oKUp0QS7nc9JMlnCTUH1IZGM0zmel2B22fjLD6ReXj4TDmGW95Jzh7ig4yYpDy54w1o5BArhR5/WVWVo/NlKAr+Br9ulE6PC9xhpD2X2Z+Ms3+gDLNWR1LA==
+  template:
+    metadata:
+      creationTimestamp: null
+      name: ext-dns-creds
+      namespace: dev
+

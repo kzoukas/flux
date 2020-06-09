@@ -1,5 +1,6 @@
 ---
 resources:
   - sealed-secrets.yaml
+  - external-dns-creds.yaml
   # - external-dns.yaml
   
