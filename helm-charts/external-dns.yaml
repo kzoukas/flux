@@ -1,12 +1,18 @@
-# ---
-#   apiVersion: helm.fluxcd.io/v1
-#   kind: HelmRelease
-#   metadata:
-#     name: flux
-#   spec:
-#     chart:
-#       repository: https://kubernetes-charts.storage.googleapis.com
-#       name: external-dns
-#       version: "2.20.4"
-#     values:  # https://hub.helm.sh/charts/fluxcd/flux
-#       provider: azure
+---
+  apiVersion: helm.fluxcd.io/v1
+  kind: HelmRelease
+  metadata:
+    name: flux
+  spec:
+    chart:
+      repository: https://kubernetes-charts.storage.googleapis.com
+      name: external-dns
+      version: "2.20.4"
+    values:  # https://hub.helm.sh/charts/fluxcd/flux
+      provider: azure
+    valuesFrom:
+    - secretKeyRef:
+        name: ext-dns-creds
+        namespace: dev
+        key: ext-dns-creds.yaml
+        optional: true
