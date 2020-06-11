@@ -24,6 +24,11 @@ helm upgrade -i flux fluxcd/flux \
 --namespace flux-system
 
 echo ">>> Installing Helm Operator"
+## For setting up reposiotories, check the helm chart values  for configureRepositories
+## https://github.com/fluxcd/helm-operator/blob/master/chart/helm-operator/values.yaml#L65
+## Article for configureRepositories written here: 
+## https://gaunacode.com/configuring-flux-to-use-helm-charts-from-azure-container-registry
+
 kubectl apply -f https://raw.githubusercontent.com/fluxcd/helm-operator/1.1.0/deploy/crds.yaml
 helm upgrade -i helm-operator fluxcd/helm-operator \
 --wait \
