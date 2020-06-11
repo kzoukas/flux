@@ -8,3 +8,10 @@ spec:
     repository: https://ingsreinstoredev.azurecr.io/helm/v1/repo/
     name: eventrouter
     version: "0.2.0"
+  values: 
+    config:
+      sink: "glog"
+    
+    image:
+      repository: "gcr.io/heptio-images/eventrouter" 
+      tag: "v0.3"
