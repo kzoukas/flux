@@ -8,4 +8,3 @@ spec:
     repository: https://ingsreinstoredev.azurecr.io/helm/v1/repo/
     name: eventrouter
     version: "0.2.0"
-  values: 
