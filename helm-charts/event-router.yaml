@@ -2,7 +2,7 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: flux
+  name: eventrouter
 spec:
   chart:
     repository: https://ingsreinstoredev.azurecr.io/helm/v1/repo/
