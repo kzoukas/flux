@@ -10,7 +10,7 @@ rules:
   resources: ["jobs", "cronjobs"]
   verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
 - apiGroups: ["extensions", "apps"]
-  resources: ["deployments"]
+  resources: ["deployments", "replicasets"]
   verbs: ["get", "list", "watch", "patch", "update", "create", "delete"]
 - apiGroups: ["networking.istio.io"]
   resources: ["virtualservices"]
