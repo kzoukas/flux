@@ -34,9 +34,9 @@ helm upgrade -i helm-operator fluxcd/helm-operator \
 --wait \
 --set git.ssh.secretName=flux-git-deploy \
 --set helm.versions=v3 \
---set configureRepositories.enable=true \
---set configureRepositories.repositories[0].name=$(ACR.Name),configureRepositories.repositories[0].url=$(ACR.Url),configureRepositories.repositories[0].username=$(KubernetesServicePrincipal.ClientId),configureRepositories.repositories[0].password=$(KubernetesServicePrincipal.ClientSecret) \
 --namespace flux-system
+# --set configureRepositories.enable=true \
+# --set configureRepositories.repositories[0].name=$(ACR.Name),configureRepositories.repositories[0].url=$(ACR.Url),configureRepositories.repositories[0].username=$(KubernetesServicePrincipal.ClientId),configureRepositories.repositories[0].password=$(KubernetesServicePrincipal.ClientSecret) \
 
 echo ">>> GitHub deploy key"
 kubectl -n flux-system logs deployment/flux | grep identity.pub | cut -d '"' -f2

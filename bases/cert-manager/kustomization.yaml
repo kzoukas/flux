@@ -1,5 +1,0 @@
----
-# https://cert-manager.io/docs/installation/kubernetes/#installing-with-helm
-resources:
-- namespace.yaml
-- cert-manager.yaml

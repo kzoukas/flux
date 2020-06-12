@@ -1,7 +1,7 @@
 git:
   url: git@github.com:IbraheemAlSaady/flux
   branch: master
-  path: "helm-charts,clusters/lab"
+  path: "teams/lab"
   pollInterval: 1m
 
 sync:

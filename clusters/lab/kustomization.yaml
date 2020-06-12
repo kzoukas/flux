@@ -1,7 +1,7 @@
 resources:
   # - ../../bases/istio
   # - ../../bases/open-policy-agent
-  - ../../bases/cert-manager
+  - ../../bases/tooling/cert-manager
   # - ../../bases/rbac
 
 # configMapGenerator:

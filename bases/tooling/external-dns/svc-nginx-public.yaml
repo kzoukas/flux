@@ -1,0 +1,25 @@
+sources:
+  - service
+
+provider: azure
+
+azure:
+  resourceGroup: rg-dev-infra
+  tenantId: "bc98b8b4-4657-4019-b79b-5a7ebfcba2b7"
+  subscriptionId: "a68c61a6-aaae-408d-b703-1d88a0610144"
+  aadClientId: "44bd6755-f13b-48e5-9b15-fcbeb6e62223"
+  aadClientSecret: "z.c8O8g2~62_pkFeOD.5c03f~63eHN8n5F"
+
+domainFilters:
+ - kubechamp.gq
+
+registry: "txt"
+txtPrefix: "txt."
+txtOwnerId: .svc-public-external-dns
+
+## options: sync, upsert-only
+policy: sync
+logLevel: info
+
+rbac:
+ serviceAccountName: external-dns
