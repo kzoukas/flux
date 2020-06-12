@@ -1,0 +1,16 @@
+resources:
+  - ../../../bases/team-default
+  - ../../../bases/flux
+
+namespace: team-4
+
+patches:
+- target:
+    kind: Namespace
+  patch: |-
+    - op: replace
+      path: /metadata/name
+      value: team-4
+
+patchesStrategicMerge:
+- patch-flux.yaml
