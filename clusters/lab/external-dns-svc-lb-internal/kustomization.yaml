@@ -6,7 +6,7 @@ patches:
 - patch: |-
     - op: replace
       path: /metadata/name
-      value: external-dns-svc-lb-internal
+      value: svc-lb-internal
     - op: replace
       path: /spec/valuesFrom/0/secretKeyRef/name
       value: svc-lb-internal
