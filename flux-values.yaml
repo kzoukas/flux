@@ -1,5 +1,5 @@
 git:
-  url: git@github.com:IbraheemAlSaady/flux
+  url: git@github.com:kzoukas/flux
   branch: master
   path: "teams/lab"
   pollInterval: 1m
