@@ -1,0 +1,18 @@
+resources:
+  - ../../../bases/tooling/external-dns/services
+  - svc-lb-internal.yaml
+
+patches:
+- patch: |-
+    - op: replace
+      path: /metadata/name
+      value: external-dns-svc-lb-internal
+    - op: replace
+      path: /spec/valuesFrom/0/secretKeyRef/name
+      value: svc-lb-internal
+    - op: replace
+      path: /spec/valuesFrom/0/secretKeyRef/key
+      value: svc-lb-internal.yaml
+  target:
+    kind: HelmRelease
+    name: external-dns

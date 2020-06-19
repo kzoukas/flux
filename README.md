@@ -22,3 +22,7 @@ Just delete the local cluster
 ```
 k3d delete
 ```
+
+## Secret Management
+* Using values from secrets: https://docs.fluxcd.io/projects/helm-operator/en/stable/helmrelease-guide/values/
+* Generate the sealedSecret value: https://github.com/fluxcd/helm-operator-get-started#managing-kubernetes-secrets

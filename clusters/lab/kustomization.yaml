@@ -2,6 +2,9 @@ resources:
   # - ../../bases/istio
   # - ../../bases/open-policy-agent
   - ../../bases/tooling/cert-manager
+  - ../../bases/tooling/external-dns/core
+  - external-dns-svc-lb-public
+  - external-dns-svc-lb-internal
   # - ../../bases/rbac
 
 # configMapGenerator:

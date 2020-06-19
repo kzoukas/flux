@@ -1,14 +1,11 @@
-generate_kubedam_pub_key:
-	kubeseal --fetch-cert \
-	--controller-namespace=adm \
-	--controller-name=sealed-secrets \
-	> pub-cert.pem
+seal:
+	mkdir -p .secrets/generated
 
-## @param name: string 
-## @param ns: string
-## @param file: string -- File path
-generate_secret_file:
 	kubectl create secret generic $(name) -n $(ns) \
 	--from-file=$(file) \
 	--dry-run \
-	-o json > $(file).json
+	-o json > .secrets/generated/$(name).json
+
+	kubeseal --format=yaml --cert=.secrets/cert.pem < .secrets/generated/$(name).json > .secrets/generated/$(name).yaml
+
+	rm .secrets/generated/$(name).json

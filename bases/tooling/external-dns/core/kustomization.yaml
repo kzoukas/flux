@@ -3,4 +3,3 @@ resources:
   - namespace.yaml
   - service-account.yaml
   - rbac.yaml
-  - external-dns.yaml

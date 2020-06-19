@@ -1,0 +1,25 @@
+---
+## docs: using values from secrets: https://docs.fluxcd.io/projects/helm-operator/en/stable/helmrelease-guide/values/
+## docs: generate the sealedSecret value: https://github.com/fluxcd/helm-operator-get-started#managing-kubernetes-secrets
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: external-dns
+  namespace: external-dns
+spec:
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com
+    name: external-dns
+    version: "2.20.4"
+  values:
+    image:
+      registry: docker.io
+      repository: bitnami/external-dns
+      tag: 0.7.0-debian-10-r0
+    provider: azure
+  valuesFrom:
+  - secretKeyRef:
+      name: svc-lb-public
+      namespace: external-dns
+      key: svc-lb-public.yaml
+      optional: true

@@ -1,0 +1,17 @@
+resources:
+  - ../../../bases/tooling/external-dns
+  - svc-lb-public.yaml
+patches:
+- patch: |-
+    - op: replace
+      path: /metadata/name
+      value: external-dns-svc-lb-public
+    - op: replace
+      path: /spec/valuesFrom/0/secretKeyRef/name
+      value: svc-lb-public
+    - op: replace
+      path: /spec/valuesFrom/0/secretKeyRef/key
+      value: svc-lb-public.yaml
+  target:
+    kind: HelmRelease
+    name: external-dns
