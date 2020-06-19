@@ -1,7 +1,7 @@
 # FluxCD
 
 ## Testing on local Kubernetes cluster
-The easiest way to run a local Kubernetes 'cluster' is to install [k3d](https://github.com/rancher/k3d). This is a wrapper around k3s and runs everything in Docker.
+The easiest way to run a local Kubernetes 'cluster' is to install [k3d](https://github.com/rancher/k3d). This is a wrapper around k3s and runs everything in Docker...
 
 ### Install k3d
 On MacOS:
