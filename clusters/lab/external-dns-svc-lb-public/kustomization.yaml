@@ -1,5 +1,5 @@
 resources:
-  - ../../../bases/tooling/external-dns
+  - ../../../bases/tooling/external-dns/services
   - svc-lb-public.yaml
 patches:
 - patch: |-
